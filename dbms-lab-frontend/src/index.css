@@ -1,0 +1,38 @@
+/* Black & White Theme using CSS Variables */
+:root {
+  --primary-color: #212529; /* A dark charcoal, almost black */
+  --secondary-color: #6c757d; /* A standard gray for accents */
+  --background-color: #f8f9fa; /* A very light off-white */
+  --card-bg: #ffffff;
+  --text-color: #212529;
+  --success-bg: #e9f7ef;
+  --danger-bg: #fdeeee;
+  --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-color: #dee2e6;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+/* Custom class to override Bootswatch row colors for consistency */
+.table-row-success {
+  background-color: var(--success-bg) !important;
+}
+
+.table-row-danger {
+  background-color: var(--danger-bg) !important;
+}
+
+.student-record-card {
+  border-left: 5px solid;
+  margin-bottom: 1rem;
+}
+.student-record-card.is-complete {
+  border-left-color: #198754; /* Bootstrap success green */
+}
+.student-record-card.is-incomplete {
+  border-left-color: #dc3545; /* Bootstrap danger red */
+}
